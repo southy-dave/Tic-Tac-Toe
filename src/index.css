@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+
+span {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  background-color: #f8f6fc;
+  border-radius: 15%;
+  border-width: 1px;
+  border-color: #e7e0eb;
+
+
+}
+
+#player-turn{
+  width: 255px;
+  height: 35px;
+  background-color: #f8f6fc;
+ 
+
+}
