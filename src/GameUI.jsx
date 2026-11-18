@@ -7,7 +7,7 @@ const GameUI = () => {
     
     const playGame = (cellIndex) => {
         const cell = document.getElementById(`cell-${cellIndex}`) 
-        if (cell.textContent !== '' && gameActive) {return}
+        if (cell.textContent !== '' || !gameActive) {return}
             {playerTurn === 'X' ? cell.textContent = 'X' : cell.textContent = 'O'} 
             {playerTurn === 'X' ? cell.className = 'text-[#592c91]' : cell.className = 'text-[#f09a13]'} 
 
@@ -84,6 +84,7 @@ const GameUI = () => {
       for (let i = 0; i < 9; i++) {
         document.getElementById(`cell-${i}`).textContent = ''
       }
+      setGameActive(true)
       setPlayerTurn('X')
       document.getElementById('player-turn').textContent = 'Player X\'s Turn'
     }}>Reset</button>
